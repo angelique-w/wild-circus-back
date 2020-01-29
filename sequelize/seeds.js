@@ -37,31 +37,31 @@ spectacles.forEach(spectacle => {
         .then(res => console.log(res.status));
 });
 
-// const users = [
-//     {
-//         firstName: "Pierre",
-//         lastName: "Henry",
-//         role: "CLIENT"
-//     },
-//     {
-//         firstName: "Benoit",
-//         lastName: "Pierre",
-//         role: "CLIENT"
-//     },
-//     {
-//         firstName: "Eldie",
-//         lastName: "Henriette",
-//         role: "CLIENT"
-//     },
-//     {
-//         firstName: "Sandra",
-//         lastName: "WildCircus",
-//         role: "ADMIN"
-//     }
-// ];
+const users = [
+    {
+        firstName: "Pierre",
+        lastName: "Henry",
+        role: "CLIENT"
+    },
+    {
+        firstName: "Benoit",
+        lastName: "Pierre",
+        role: "CLIENT"
+    },
+    {
+        firstName: "Eldie",
+        lastName: "Henriette",
+        role: "CLIENT"
+    },
+    {
+        firstName: "Sandra",
+        lastName: "WildCircus",
+        role: "ADMIN"
+    }
+];
 
-// users.forEach(user => {
-//     axios
-//         .post("http://localhost:8000/users", user)
-//         .then(res => console.log(res.status));
-// });
+users.forEach(user => {
+    axios
+        .post("http://localhost:8000/users", user)
+        .then(res => console.log(res.status));
+});
