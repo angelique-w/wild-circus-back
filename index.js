@@ -16,6 +16,7 @@ app.get("/", (req, res) => res.send("Hello world !"));
 
 // Routes
 app.use("/spectacles", require("./routes/spectacles.route"));
+app.use("/users", require("./routes/users.route"));
 
 async function main() {
     try {

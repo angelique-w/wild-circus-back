@@ -1,8 +1,8 @@
 const User = require("./models/users");
 const Spectacle = require("./models/spectacles");
 
-Spectacle.hasMany(User, { foreignKey: { allowNull: false } });
+Spectacle.hasMany(User);
 User.belongsTo(Spectacle, {
-    foreignKey: { allowNull: false },
+    foreignKey: { allowNull: true },
     onDelete: "CASCADE"
 });
