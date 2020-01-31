@@ -1,8 +1,8 @@
 const Sequelize = require("sequelize");
 const sequelize = require("../index");
 
-const User = sequelize.define(
-    "User",
+const Spectacle = sequelize.define(
+    "Spectacle",
     {
         uuid: {
             type: Sequelize.UUID,
@@ -10,21 +10,28 @@ const User = sequelize.define(
             primaryKey: true,
             defaultValue: Sequelize.UUIDV4
         },
-        firstName: {
+        ville: {
             type: Sequelize.STRING,
             allowNull: false
         },
-        lastName: {
-            type: Sequelize.STRING,
+        date: {
+            type: Sequelize.DATEONLY,
             allowNull: false
         },
-        role: {
+        adresse: {
             type: Sequelize.STRING,
-            allownull: false,
-            defaultValue: "CLIENT"
+            allowNull: true
+        },
+        placesTotales: {
+            type: Sequelize.INTEGER,
+            allowNull: false
+        },
+        placesRestantes: {
+            type: Sequelize.INTEGER,
+            allowNull: false
         }
     },
     {}
 );
 
-module.exports = User;
+module.exports = Spectacle;
